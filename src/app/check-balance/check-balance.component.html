@@ -1,0 +1,13 @@
+<div class="container mt-5"> 
+    <h3>Check Balance</h3>
+    <form (submit)="checkBalance()">
+      <div class="mb-3">
+        <label for="accountId" class="form-label">Account ID</label>
+        <input type="number" class="form-control" id="accountId"  [(ngModel)]="accountId" name="accountId" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Check Balance</button>
+    </form>
+    <div *ngIf="balance !== null" class="mt-3">
+      <h5>Balance: {{ balance | currency }}</h5>
+    </div>
+</div>

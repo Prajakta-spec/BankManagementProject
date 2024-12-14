@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h3>Delete Account</h3>
+    <form (ngSubmit)="deleteAccount()">
+      <div class="mb-3">
+        <label for="accountId" class="form-label">Account ID</label>
+        <input type="number" class="form-control" id="accountId" [(ngModel)]="accountId" name="accountId" required />
+      </div>
+      <button type="submit" class="btn btn-danger">Delete Account</button>
+    </form>
+    <div *ngIf="message" class="mt-3">
+      <h5>{{ message }}</h5>
+    </div>
+  </div>
+  
